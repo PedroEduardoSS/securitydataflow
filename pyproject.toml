@@ -1,0 +1,12 @@
+[project]
+name = "securitydataflow"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.4.6",
+    "pandas>=3.0.3",
+    "prefect>=3.7.4",
+    "scrapling>=0.4.9",
+]
