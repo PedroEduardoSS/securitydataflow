@@ -8,5 +8,5 @@ dependencies = [
     "numpy>=2.4.6",
     "pandas>=3.0.3",
     "prefect>=3.7.4",
-    "scrapling>=0.4.9",
+    "scrapling[fetchers]>=0.4.9",
 ]
