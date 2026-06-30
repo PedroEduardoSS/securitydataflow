@@ -1,9 +1,11 @@
 from prefect import task, flow
 import pandas as pd
+from scrap import extract, transform, load
 
 # Extract data
 @task
 def extract_data():
+    extract()
     # Simulating data extraction
     data = {
         "name": ["Alice", "Bob", "Charlie"],
@@ -16,6 +18,7 @@ def extract_data():
 # Transform data
 @task
 def transform_data(df: pd.DataFrame):
+    transform()
     # Example transformation: adding a new column
     df["age_plus_ten"] = df["age"] + 10
     return df
@@ -23,6 +26,7 @@ def transform_data(df: pd.DataFrame):
 # Load data
 @task
 def load_data(df: pd.DataFrame):
+    load()
     # Simulating data load
     print("Loading data to target destination:")
     print(df)
